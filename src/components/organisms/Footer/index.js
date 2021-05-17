@@ -19,13 +19,7 @@ const Footer = (props) => {
   return (
     <Wrapper {...props}>
       <Credits>
-        Made with
-        {' '}
-        <Icon icon="heart" />
-        {' '}
-by
-        {' '}
-        <Link href="https://github.com/diegohaz">Haz</Link>
+        AK1Photography <Icon icon="react" />
       </Credits>
     </Wrapper>
   )
