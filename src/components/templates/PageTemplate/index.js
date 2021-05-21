@@ -15,17 +15,23 @@ const Wrapper = styled.div`
   }
 `
 
-const Header = styled.header`
+const Navbar = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
 `
 
+const Hero = styled.section`
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+`
+
 const Content = styled.section`
   width: 100%;
   box-sizing: border-box;
-  margin: 2rem auto;
   max-width: ${size('maxWidth')};
 `
 
@@ -33,10 +39,11 @@ const Footer = styled.footer`
   margin-top: auto;
 `
 
-const PageTemplate = ({ header, children, footer, ...props }) => {
+const PageTemplate = ({ navbar, hero, children, footer, ...props }) => {
   return (
     <Wrapper {...props}>
-      <Header>{header}</Header>
+      <Navbar>{navbar}</Navbar>
+      <Hero>{hero}</Hero>
       <Content>{children}</Content>
       <Footer>{footer}</Footer>
     </Wrapper>
@@ -44,7 +51,7 @@ const PageTemplate = ({ header, children, footer, ...props }) => {
 }
 
 PageTemplate.propTypes = {
-  header: PropTypes.node.isRequired,
+  navbar: PropTypes.node.isRequired,
   footer: PropTypes.node.isRequired,
   children: PropTypes.any,
 }

@@ -11,6 +11,12 @@ const Nav = styled.nav`
   > :not(:first-child) {
     margin-left: 1rem;
   }
+  margin: 1rem 3rem;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
   a {
     font-weight: 300;
     color: ${palette('grayscale', 2)};
@@ -24,8 +30,36 @@ const Nav = styled.nav`
 const PrimaryNavigation = (props) => {
   return (
     <Nav {...props}>
-      <li><Link to="/" exact activeClassName="active">Home</Link></li>
-      <li><Link to="/sample-page" activeClassName="active">Sample page</Link></li>
+      <li>
+        <Link to="/" exact activeClassName="active">
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link to="/sample-page" activeClassName="active">
+          Portfolio
+        </Link>
+      </li>
+      <li>
+        <Link to="/sample-page" activeClassName="active">
+          Tesimonials
+        </Link>
+      </li>
+      <li>
+        <Link to="/sample-page" activeClassName="active">
+          About
+        </Link>
+      </li>
+      <li>
+        <Link to="/sample-page" activeClassName="active">
+          Inquiries
+        </Link>
+      </li>
+      <li>
+        <Link to="/sample-page" activeClassName="active">
+          Social
+        </Link>
+      </li>
     </Nav>
   )
 }

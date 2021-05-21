@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { Icon, Link } from 'components'
 
-const fontSize = ({ height }) => height ? `${height / 3 / 16}rem` : '0.75em'
+const fontSize = ({ height }) => (height ? `${height / 3 / 16}rem` : '0.75em')
 
 const margin = ({ hasText, right }) => {
   if (hasText) {
@@ -28,7 +28,13 @@ const Text = styled.span`
 `
 
 const IconLink = ({
-  height, icon, right, responsive, children, ...props
+  height,
+  icon,
+  right,
+  responsive,
+  navLink,
+  children,
+  ...props
 }) => {
   const { palette, reverse } = props
   const iconElement = (
@@ -57,6 +63,7 @@ IconLink.propTypes = {
   palette: PropTypes.string,
   reverse: PropTypes.bool,
   responsive: PropTypes.bool,
+  navLink: PropTypes.bool,
   right: PropTypes.bool,
   children: PropTypes.node,
 }
