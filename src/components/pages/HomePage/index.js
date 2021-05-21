@@ -5,8 +5,8 @@ import {
   PageTemplate,
   Navbar,
   Footer,
-  Paragraph,
   HeroSection,
+  PortfolioGrid,
 } from 'components'
 
 const HomePage = () => {
@@ -15,7 +15,9 @@ const HomePage = () => {
       navbar={<Navbar />}
       hero={<HeroSection />}
       footer={<Footer />}
-    ></PageTemplate>
+    >
+      <PortfolioGrid />
+    </PageTemplate>
   )
 }
 

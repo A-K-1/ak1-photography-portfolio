@@ -8,8 +8,7 @@ const InnerWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  width: 100%;
+  padding: 15px 20px;
   > :not(:first-child) {
     margin-left: 1rem;
   }

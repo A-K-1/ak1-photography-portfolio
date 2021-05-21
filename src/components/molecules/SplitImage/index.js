@@ -10,35 +10,29 @@ const Wrapper = styled.div`
   flex-direction: ${(props) => (props.horizontal ? 'column' : 'row')};
 `
 
-const HeroLeftImg = styled.div`
+const HeroLeftImg = styled.img`
   width: ${(props) => (props.horizontal ? '100%' : '50%')};
-  height: ${(props) => (props.horizontal ? '50%' : 'unset')}
-  background-image: url(${(props) => props.background && props.background});
-  background-size: ${(props) => (props.horizontal ? 'cover' : 'contain')}
-  background-repeat: no-repeat;
+  height: ${(props) => (props.horizontal ? '50%' : 'unset')};
 `
 
-const HeroRightImg = styled.div`
+const HeroRightImg = styled.img`
   width: ${(props) => (props.horizontal ? '100%' : '50%')};
-  height: ${(props) => (props.horizontal ? '50%' : 'unset')}
-  background-image: url(${(props) => props.background && props.background});
-  background-size: ${(props) => (props.horizontal ? 'cover' : 'contain')}
-  background-repeat: no-repeat;
+  height: ${(props) => (props.horizontal ? '50%' : 'unset')};
 `
 
-const SplitImageVertical = ({ leftImage, rightImage, horizontal }) => {
+const SplitImage = ({ leftImage, rightImage, horizontal }) => {
   return (
     <Wrapper horizontal={horizontal}>
-      <HeroLeftImg background={leftImage} horizontal={horizontal} />
-      <HeroRightImg background={rightImage} horizontal={horizontal} />
+      <HeroLeftImg horizontal={horizontal} src={leftImage} />
+      <HeroRightImg horizontal={horizontal} src={rightImage} />
     </Wrapper>
   )
 }
 
-SplitImageVertical.propTypes = {}
+SplitImage.propTypes = {}
 
-SplitImageVertical.defaultProps = {
+SplitImage.defaultProps = {
   horizontal: false,
 }
 
-export default SplitImageVertical
+export default SplitImage

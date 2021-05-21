@@ -6,10 +6,10 @@ import { SplitImage, Image } from 'components'
 
 const Wrapper = styled.div`
   background-color: #fff;
-  height: 100vw;
+  height: 68vw;
 
   @media screen and (max-width: 768px) {
-    height: 1200px;
+    height: fit-content;
   }
 `
 
@@ -23,7 +23,6 @@ const SplitImageDesktop = styled.div`
 
 const SplitImageMobile = styled.div`
   display: none;
-  height: inherit;
   @media screen and (max-width: 768px) {
     display: block;
   }
