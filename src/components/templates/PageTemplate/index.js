@@ -25,8 +25,7 @@ const Navbar = styled.div`
 const Hero = styled.section`
   width: 100%;
   box-sizing: border-box;
-  position: absolute;
-  top: 0;
+  margin-top: -60px;
 `
 
 const Content = styled.section`
@@ -37,6 +36,7 @@ const Content = styled.section`
 
 const Footer = styled.footer`
   margin-top: auto;
+  z-index: 999;
 `
 
 const PageTemplate = ({ navbar, hero, children, footer, ...props }) => {
