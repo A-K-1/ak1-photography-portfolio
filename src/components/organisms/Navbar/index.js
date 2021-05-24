@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { size } from 'styled-theme'
+import { animateScroll as scroll } from 'react-scroll'
 
-import { IconLink, PrimaryNavigation } from 'components'
+import { IconLink, PrimaryNavigation, Image } from 'components'
 
 const InnerWrapper = styled.div`
   display: flex;
@@ -15,10 +16,21 @@ const InnerWrapper = styled.div`
   }
 `
 
+const LogoWrapper = styled.div`
+  cursor: pointer;
+`
+
 const Navbar = (props) => {
+  const toggleHome = () => {
+    scroll.scrollToTop()
+  }
+
+  const logo = require('../../../../public/whiteLogo.png')
   return (
     <InnerWrapper>
-      <IconLink to="/" icon="arc" navLink height={100} />
+      <LogoWrapper onClick={toggleHome}>
+        <Image image={logo} height="50px" width="auto" />
+      </LogoWrapper>
       <PrimaryNavigation reverse />
     </InnerWrapper>
   )
