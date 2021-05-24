@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { font, palette } from 'styled-theme'
 
 const TextCardWrapper = styled.div`
-  background: #fff;
+  background: ${(props) => (props.boxColour ? props.boxColour : '#fff')};
   display: flex;
   position: relative;
   flex-direction: column;
@@ -20,13 +20,13 @@ const TextCardWrapper = styled.div`
 const CardText = styled.p`
   font-size: 1.5rem;
   font-family: ${font('primary')};
-  color: #000;
+  color: ${(props) => (props.textColour ? props.textColour : '#000')};
 `
 
-const TextCard = ({ children }) => {
+const TextCard = ({ textColour, boxColour, children }) => {
   return (
-    <TextCardWrapper>
-      <CardText>{children}</CardText>
+    <TextCardWrapper boxColour={boxColour}>
+      <CardText textColour={textColour}>{children}</CardText>
     </TextCardWrapper>
   )
 }

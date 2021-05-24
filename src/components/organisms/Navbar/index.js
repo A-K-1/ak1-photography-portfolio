@@ -9,7 +9,7 @@ const InnerWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 2px 20px;
   background-color: #000;
   > :not(:first-child) {
     margin-left: 1rem;
@@ -29,7 +29,7 @@ const Navbar = (props) => {
   return (
     <InnerWrapper>
       <LogoWrapper onClick={toggleHome}>
-        <Image image={logo} height="50px" width="auto" />
+        <Image image={logo} height="60px" width="auto" />
       </LogoWrapper>
       <PrimaryNavigation reverse />
     </InnerWrapper>
