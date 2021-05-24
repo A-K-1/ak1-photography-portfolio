@@ -31,16 +31,6 @@ const Nav = styled.nav`
   }
 `
 
-// const NavbarContainer = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   height: 80px;
-//   z-index: 1;
-//   width: 100%;
-//   padding: 0 24px;
-//   max-width: 1100px;
-// `
-
 const MobileIcon = styled.div`
   display: none;
 
@@ -119,7 +109,7 @@ const PrimaryNavigation = ({ toggle, props }) => {
             duration={500}
             spy={true}
             exact="true"
-            offset={0}
+            offset={-64}
           >
             Portfolio
           </NavLinks>
@@ -131,19 +121,19 @@ const PrimaryNavigation = ({ toggle, props }) => {
             duration={500}
             spy={true}
             exact="true"
-            offset={0}
+            offset={-64}
           >
             Testimonials
           </NavLinks>
         </NavItem>
         <NavItem>
           <NavLinks
-            to="about"
+            to="aboutMe"
             smooth={true}
             duration={500}
             spy={true}
             exact="true"
-            offset={0}
+            offset={-64}
           >
             About
           </NavLinks>
@@ -155,7 +145,7 @@ const PrimaryNavigation = ({ toggle, props }) => {
             duration={500}
             spy={true}
             exact="true"
-            offset={0}
+            offset={-64}
           >
             Inquiries
           </NavLinks>
@@ -167,7 +157,7 @@ const PrimaryNavigation = ({ toggle, props }) => {
             duration={500}
             spy={true}
             exact="true"
-            offset={0}
+            offset={-64}
           >
             Social
           </NavLinks>

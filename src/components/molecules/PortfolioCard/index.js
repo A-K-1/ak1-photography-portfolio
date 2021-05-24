@@ -10,9 +10,14 @@ const PortfolioCardWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 300px;
-  width: 450px;
+  height: 250px;
+  width: 375px;
   transition: all 0.2s ease-in-out;
+
+  @media screen and (min-width: 1646px) {
+    height: 300px;
+    width: 450px;
+  }
 
   &:hover {
     transform: scale(1.02);

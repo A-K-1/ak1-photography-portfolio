@@ -30,7 +30,7 @@ const SplitImageMobile = styled.div`
 
 const HeroSection = (props) => {
   const leftImage = require('../../../../public/portraitHero.jpg')
-  const rightImage = require('../../../../public/landscapeHero.jpg')
+  const rightImage = require('../../../../public/portraitHero2.jpg')
   const mobileImage = require('../../../../public/portraitHeroMobile.jpg')
   return (
     <Wrapper {...props}>

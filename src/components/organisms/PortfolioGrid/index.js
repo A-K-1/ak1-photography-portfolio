@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { font } from 'styled-theme'
 
-import { PortfolioCard } from 'components'
+import { PortfolioCard, Heading } from 'components'
 
 const PortfolioContainer = styled.div`
   display: flex;
@@ -31,25 +31,10 @@ const PortfolioWrapper = styled.div`
   }
 `
 
-const PortfolioHeader = styled.h1`
-  font-size: 2.5rem;
-  color: #fff;
-  margin: 64px 0;
-  font-family: ${font('primary')};
-
-  @media screen and (max-width: 480px) {
-    font-size: 2rem;
-  }
-`
-
-const Services = () => {
-  console.log('YOYOYO', process.env)
-  console.log(process.env.REACT_APP_CLIENT_ID) //printing it to console
-  console.log(process.env.REACT_APP_KEY) //printing it to console
-  console.log('node', process.env.NODE_ENV)
+const Portfolio = () => {
   return (
     <PortfolioContainer id="portfolio">
-      <PortfolioHeader>Portfolio</PortfolioHeader>
+      <Heading>Portfolio</Heading>
       <PortfolioWrapper>
         <PortfolioCard
           header={'Landscapes'}
@@ -80,4 +65,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Portfolio

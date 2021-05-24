@@ -7,6 +7,10 @@ import {
   Footer,
   HeroSection,
   PortfolioGrid,
+  Testimonials,
+  AboutGrid,
+  Inquiries,
+  SocialGrid,
 } from 'components'
 
 const HomePage = () => {
@@ -17,6 +21,10 @@ const HomePage = () => {
       footer={<Footer />}
     >
       <PortfolioGrid />
+      <Testimonials />
+      <AboutGrid />
+      <Inquiries />
+      <SocialGrid />
     </PageTemplate>
   )
 }

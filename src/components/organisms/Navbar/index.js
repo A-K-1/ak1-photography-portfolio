@@ -9,6 +9,7 @@ const InnerWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
+  background-color: #000;
   > :not(:first-child) {
     margin-left: 1rem;
   }
