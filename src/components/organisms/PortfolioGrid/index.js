@@ -43,6 +43,10 @@ const PortfolioHeader = styled.h1`
 `
 
 const Services = () => {
+  console.log('YOYOYO', process.env)
+  console.log(process.env.REACT_APP_CLIENT_ID) //printing it to console
+  console.log(process.env.REACT_APP_KEY) //printing it to console
+  console.log('node', process.env.NODE_ENV)
   return (
     <PortfolioContainer id="portfolio">
       <PortfolioHeader>Portfolio</PortfolioHeader>
