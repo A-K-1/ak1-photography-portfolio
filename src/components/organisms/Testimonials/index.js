@@ -6,12 +6,14 @@ import Slider from 'react-slick'
 
 const TestimonialsContainer = styled.div`
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   width: inherit;
   align-items: center;
   background: #fff;
   padding-bottom: 70px;
+  height: 1000px;
 `
 
 const TestimonialsWrapper = styled.div`
@@ -21,8 +23,7 @@ const TestimonialsWrapper = styled.div`
   justify-content: center;
   grid-gap: 16px;
   padding: 0 50px;
-  height: 1000px;
-  width: 1000px !important;
+  width: 73vw;
 
   @media screen and (max-width: 1000px) {
   }
@@ -32,43 +33,48 @@ const TestimonialsWrapper = styled.div`
   }
 `
 
+const TestimonialCardWrapper = styled.div`
+  color: #fff;
+  font-size: 36px;
+  line-height: 100px;
+  position: relative;
+  text-align: center;
+`
+
 const TestimonialCard = styled.div`
-  background-color: red;
+  background: #fff;
+  color: #000;
+  font-size: 36px;
+  line-height: 100px;
+  position: relative;
+  text-align: center;
   border: 1px solid black;
-  width: 400px;
+  margin: 10px;
 `
 
 const StyledSlider = styled(Slider)`
   width: inherit;
+  display: flex;
 `
 
 const settings = {
   dots: true,
   infinite: false,
   speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  initialSlide: 0,
+  slidesToShow: 3,
+  slidesToScroll: 3,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1224,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         infinite: true,
         dots: true,
       },
     },
     {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 480,
+      breakpoint: 900,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -83,30 +89,46 @@ const Testimonials = () => {
       <Heading colour="#000">Testimonials</Heading>
       <TestimonialsWrapper>
         <StyledSlider {...settings}>
-          <TestimonialCard>
-            <h1>1</h1>
-          </TestimonialCard>
-          <TestimonialCard>
-            <h1>1</h1>
-          </TestimonialCard>
-          <TestimonialCard>
-            <h1>1</h1>
-          </TestimonialCard>
-          <TestimonialCard>
-            <h1>1</h1>
-          </TestimonialCard>
-          <TestimonialCard>
-            <h1>1</h1>
-          </TestimonialCard>
-          <TestimonialCard>
-            <h1>1</h1>
-          </TestimonialCard>
-          <TestimonialCard>
-            <h1>1</h1>
-          </TestimonialCard>
-          <TestimonialCard>
-            <h1>1</h1>
-          </TestimonialCard>
+          <TestimonialCardWrapper>
+            <TestimonialCard>
+              <h1>1</h1>
+            </TestimonialCard>
+          </TestimonialCardWrapper>
+          <TestimonialCardWrapper>
+            <TestimonialCard>
+              <h1>2</h1>
+            </TestimonialCard>
+          </TestimonialCardWrapper>
+          <TestimonialCardWrapper>
+            <TestimonialCard>
+              <h1>3</h1>
+            </TestimonialCard>
+          </TestimonialCardWrapper>
+          <TestimonialCardWrapper>
+            <TestimonialCard>
+              <h1>4</h1>
+            </TestimonialCard>
+          </TestimonialCardWrapper>
+          <TestimonialCardWrapper>
+            <TestimonialCard>
+              <h1>5</h1>
+            </TestimonialCard>
+          </TestimonialCardWrapper>
+          <TestimonialCardWrapper>
+            <TestimonialCard>
+              <h1>6</h1>
+            </TestimonialCard>
+          </TestimonialCardWrapper>
+          <TestimonialCardWrapper>
+            <TestimonialCard>
+              <h1>7</h1>
+            </TestimonialCard>
+          </TestimonialCardWrapper>
+          <TestimonialCardWrapper>
+            <TestimonialCard>
+              <h1>8</h1>
+            </TestimonialCard>
+          </TestimonialCardWrapper>
         </StyledSlider>
       </TestimonialsWrapper>
     </TestimonialsContainer>
