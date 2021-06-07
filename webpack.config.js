@@ -31,6 +31,10 @@ const wpConfig = {
           test: /\.(png|jpe?g|svg|woff2?|ttf|eot)$/,
           loader: 'url-loader?limit=8000',
         },
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
       ],
     },
     plugins: [
