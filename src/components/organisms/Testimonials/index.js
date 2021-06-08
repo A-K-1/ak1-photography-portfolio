@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { font } from 'styled-theme'
-import { PortfolioCard, Heading } from 'components'
+import { TestimonialCard, Heading } from 'components'
 import Slider from 'react-slick'
 
 const TestimonialsContainer = styled.div`
@@ -22,8 +22,7 @@ const TestimonialsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   grid-gap: 16px;
-  padding: 0 50px;
-  width: 73vw;
+  width: 80vw;
 
   @media screen and (max-width: 1000px) {
   }
@@ -33,28 +32,13 @@ const TestimonialsWrapper = styled.div`
   }
 `
 
-const TestimonialCardWrapper = styled.div`
-  color: #fff;
-  font-size: 36px;
-  line-height: 100px;
-  position: relative;
-  text-align: center;
-`
-
-const TestimonialCard = styled.div`
-  background: #fff;
-  color: #000;
-  font-size: 36px;
-  line-height: 100px;
-  position: relative;
-  text-align: center;
-  border: 1px solid black;
-  margin: 10px;
-`
-
 const StyledSlider = styled(Slider)`
   width: inherit;
   display: flex;
+
+  .slick-list {
+    padding-top: 50px;
+  }
 `
 
 const settings = {
@@ -84,51 +68,42 @@ const settings = {
 }
 
 const Testimonials = () => {
+  const testImage = require('../../../../public/portraitHero.jpg')
   return (
     <TestimonialsContainer id="testimonials">
       <Heading colour="#000">Testimonials</Heading>
       <TestimonialsWrapper>
         <StyledSlider {...settings}>
-          <TestimonialCardWrapper>
-            <TestimonialCard>
-              <h1>1</h1>
-            </TestimonialCard>
-          </TestimonialCardWrapper>
-          <TestimonialCardWrapper>
-            <TestimonialCard>
-              <h1>2</h1>
-            </TestimonialCard>
-          </TestimonialCardWrapper>
-          <TestimonialCardWrapper>
-            <TestimonialCard>
-              <h1>3</h1>
-            </TestimonialCard>
-          </TestimonialCardWrapper>
-          <TestimonialCardWrapper>
-            <TestimonialCard>
-              <h1>4</h1>
-            </TestimonialCard>
-          </TestimonialCardWrapper>
-          <TestimonialCardWrapper>
-            <TestimonialCard>
-              <h1>5</h1>
-            </TestimonialCard>
-          </TestimonialCardWrapper>
-          <TestimonialCardWrapper>
-            <TestimonialCard>
-              <h1>6</h1>
-            </TestimonialCard>
-          </TestimonialCardWrapper>
-          <TestimonialCardWrapper>
-            <TestimonialCard>
-              <h1>7</h1>
-            </TestimonialCard>
-          </TestimonialCardWrapper>
-          <TestimonialCardWrapper>
-            <TestimonialCard>
-              <h1>8</h1>
-            </TestimonialCard>
-          </TestimonialCardWrapper>
+          <TestimonialCard
+            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            image={testImage}
+            name="Arron Kukadia"
+          />
+          <TestimonialCard
+            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            image={testImage}
+            name="Arron Kukadia"
+          />
+          <TestimonialCard
+            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            image={testImage}
+            name="Arron Kukadia"
+          />
+          <TestimonialCard
+            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            image={testImage}
+            name="Arron Kukadia"
+          />
+          <TestimonialCard
+            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            image={testImage}
+            name="Arron Kukadia"
+          />
+          <TestimonialCard
+            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            image={testImage}
+            name="Arron Kukadia"
+          />
         </StyledSlider>
       </TestimonialsWrapper>
     </TestimonialsContainer>
