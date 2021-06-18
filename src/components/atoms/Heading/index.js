@@ -14,6 +14,9 @@ const styles = css`
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
+  @media screen and (max-width: 768px) {
+    margin: 25px 0 20px;
+  }
 `
 
 const Heading = styled(

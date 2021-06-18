@@ -34,7 +34,7 @@ const baseStyles = css`
 `
 
 const oddSpans = css`
-  left: 0px;
+  left: 1px;
   border-radius: 2px 0 0 2px;
 `
 

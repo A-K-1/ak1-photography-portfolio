@@ -9,11 +9,10 @@ const TestimonialsContainer = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   justify-content: end;
-  width: inherit;
   align-items: center;
   background: #fff;
   padding-bottom: 70px;
-  height: 900px;
+  height: fit-content;
   width: auto;
 `
 
@@ -29,7 +28,7 @@ const TestimonialsWrapper = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    padding: 0 20px;
+    width: 96vw;
   }
 `
 

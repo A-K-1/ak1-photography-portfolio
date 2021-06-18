@@ -12,7 +12,6 @@ const AboutWrapper = styled.div`
   width: inherit;
   align-items: center;
   background: #010606;
-  padding-bottom: 70px;
 `
 
 const AboutBodyWrapper = styled.div`
@@ -23,7 +22,6 @@ const AboutBodyWrapper = styled.div`
   width: inherit;
   align-items: center;
   background: #010606;
-  padding-bottom: 70px;
 `
 
 const MobilePadding = styled.div`
