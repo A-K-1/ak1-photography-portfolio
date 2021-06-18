@@ -170,19 +170,15 @@ const Span6 = styled.span`
   `}
 `
 
-const MenuIcon = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-
-  const toggleMenu = () => setMenuOpen(!menuOpen)
-
+const MenuIcon = ({ isOpen, toggle }) => {
   return (
-    <MenuIconContainer open={menuOpen} onClick={toggleMenu}>
-      <Span1 open={menuOpen}></Span1>
-      <Span2 open={menuOpen}></Span2>
-      <Span3 open={menuOpen}></Span3>
-      <Span4 open={menuOpen}></Span4>
-      <Span5 open={menuOpen}></Span5>
-      <Span6 open={menuOpen}></Span6>
+    <MenuIconContainer open={isOpen}>
+      <Span1 open={isOpen}></Span1>
+      <Span2 open={isOpen}></Span2>
+      <Span3 open={isOpen}></Span3>
+      <Span4 open={isOpen}></Span4>
+      <Span5 open={isOpen}></Span5>
+      <Span6 open={isOpen}></Span6>
     </MenuIconContainer>
   )
 }

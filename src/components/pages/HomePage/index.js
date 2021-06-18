@@ -29,7 +29,7 @@ const HomePage = () => {
   return (
     <Wrapper>
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      <Navbar isOpen={isOpen} toggle={toggle} />
       <HeroSection />
       <PortfolioGrid />
       <Testimonials />

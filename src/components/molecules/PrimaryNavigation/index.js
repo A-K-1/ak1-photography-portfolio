@@ -72,11 +72,7 @@ const NavLinks = styled(LinkScroll)`
   }
 `
 
-const StyledFaBars = styled(FaBars)`
-  color: #fff;
-`
-
-const PrimaryNavigation = ({ toggle }) => {
+const PrimaryNavigation = ({ isOpen, toggle }) => {
   const [scrollNav, setScrollNav] = useState(false)
 
   const changeNav = () => {
@@ -94,14 +90,14 @@ const PrimaryNavigation = ({ toggle }) => {
   return (
     <Nav scrollNav={scrollNav}>
       <MobileIcon onClick={toggle}>
-        <MenuIcon />
+        <MenuIcon isOpen={isOpen} />
       </MobileIcon>
       <NavMenu>
         <NavItem>
           <NavLinks
             to="portfolio"
             smooth={true}
-            duration={500}
+            duration={2000}
             spy={true}
             exact="true"
             offset={-60}

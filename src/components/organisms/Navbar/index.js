@@ -31,7 +31,7 @@ const LogoWrapper = styled.div`
   }
 `
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ isOpen, toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop()
   }
@@ -42,7 +42,7 @@ const Navbar = ({ toggle }) => {
       <LogoWrapper onClick={toggleHome}>
         <Image image={logo} height="60px" width="auto" />
       </LogoWrapper>
-      <PrimaryNavigation toggle={toggle} />
+      <PrimaryNavigation isOpen={isOpen} toggle={toggle} />
     </InnerWrapper>
   )
 }
