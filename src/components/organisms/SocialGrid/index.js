@@ -8,7 +8,7 @@ const SocialContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: inherit;
+  width: auto;
   align-items: center;
   background: #010606;
   padding-bottom: 70px;

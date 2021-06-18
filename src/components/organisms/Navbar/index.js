@@ -9,8 +9,14 @@ const InnerWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2px 20px;
+  padding: 2px;
   background-color: #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 999;
+
   > :not(:first-child) {
     margin-left: 1rem;
   }
@@ -18,9 +24,14 @@ const InnerWrapper = styled.div`
 
 const LogoWrapper = styled.div`
   cursor: pointer;
+  margin-left: 2rem;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 1rem;
+  }
 `
 
-const Navbar = (props) => {
+const Navbar = ({ toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop()
   }
@@ -31,7 +42,7 @@ const Navbar = (props) => {
       <LogoWrapper onClick={toggleHome}>
         <Image image={logo} height="60px" width="auto" />
       </LogoWrapper>
-      <PrimaryNavigation reverse />
+      <PrimaryNavigation toggle={toggle} />
     </InnerWrapper>
   )
 }

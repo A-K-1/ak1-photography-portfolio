@@ -1,8 +1,7 @@
-// https://github.com/diegohaz/arc/wiki/Atomic-Design
-import React from 'react'
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 import {
-  PageTemplate,
   Navbar,
   Footer,
   HeroSection,
@@ -11,21 +10,34 @@ import {
   AboutGrid,
   Inquiries,
   SocialGrid,
+  Sidebar,
 } from 'components'
 
+const Wrapper = styled.div`
+  width: 100%;
+  box-sizing: border-box;
+  width: fit-content;
+  font-family: Helvetica Neue, Helvetica, Roboto, sans-serif;
+`
 const HomePage = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <PageTemplate
-      navbar={<Navbar />}
-      hero={<HeroSection />}
-      footer={<Footer />}
-    >
+    <Wrapper>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
+      <HeroSection />
       <PortfolioGrid />
       <Testimonials />
       <AboutGrid />
       <Inquiries />
       <SocialGrid />
-    </PageTemplate>
+      <Footer />
+    </Wrapper>
   )
 }
 

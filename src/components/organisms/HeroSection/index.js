@@ -7,6 +7,8 @@ import { SplitImage, Image } from 'components'
 const Wrapper = styled.div`
   background-color: #fff;
   height: 68vw;
+  width: 100%;
+  box-sizing: border-box;
 
   @media screen and (max-width: 768px) {
     height: fit-content;

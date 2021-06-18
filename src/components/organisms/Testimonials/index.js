@@ -13,7 +13,8 @@ const TestimonialsContainer = styled.div`
   align-items: center;
   background: #fff;
   padding-bottom: 70px;
-  height: 1000px;
+  height: 900px;
+  width: auto;
 `
 
 const TestimonialsWrapper = styled.div`

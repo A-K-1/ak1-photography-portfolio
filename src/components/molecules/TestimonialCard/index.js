@@ -29,13 +29,11 @@ const TestimonialText = styled.p`
   font-style: italic;
   font-size: 1.25rem;
   line-height: normal;
-  font-family: Helvetica Neue, Helvetica, Roboto, sans-serif;
 `
 
 const TestimonialName = styled.p`
   color: #000;
   font-size: 1.5rem;
-  font-family: Helvetica Neue, Helvetica, Roboto, sans-serif;
   line-height: 30px;
 `
 

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll'
 import { Link as LinkRouter } from 'react-router-dom'
-import { Link } from 'components'
 import { FaBars } from 'react-icons/fa'
 import { font, palette } from 'styled-theme'
 
@@ -15,11 +14,7 @@ const Nav = styled.nav`
   > :not(:first-child) {
     margin-left: 1rem;
   }
-  margin: 0 1rem;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+  margin: 0 2rem;
 
   a {
     font-weight: 300;
@@ -37,7 +32,7 @@ const MobileIcon = styled.div`
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 0;
+    top: 3px;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
@@ -77,11 +72,15 @@ const NavLinks = styled(LinkScroll)`
   }
 `
 
-const PrimaryNavigation = ({ toggle, props }) => {
+const StyledFaBars = styled(FaBars)`
+  color: #fff;
+`
+
+const PrimaryNavigation = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false)
 
   const changeNav = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 60) {
       setScrollNav(true)
     } else {
       setScrollNav(false)
@@ -92,14 +91,10 @@ const PrimaryNavigation = ({ toggle, props }) => {
     window.addEventListener('scroll', changeNav)
   }, [])
 
-  const toggleHome = () => {
-    scroll.scrollToTop()
-  }
-
   return (
-    <Nav scrollNav={scrollNav} {...props}>
+    <Nav scrollNav={scrollNav}>
       <MobileIcon onClick={toggle}>
-        <FaBars />
+        <StyledFaBars />
       </MobileIcon>
       <NavMenu>
         <NavItem>
@@ -109,7 +104,7 @@ const PrimaryNavigation = ({ toggle, props }) => {
             duration={500}
             spy={true}
             exact="true"
-            offset={-64}
+            offset={-60}
           >
             Portfolio
           </NavLinks>
@@ -121,7 +116,7 @@ const PrimaryNavigation = ({ toggle, props }) => {
             duration={500}
             spy={true}
             exact="true"
-            offset={-64}
+            offset={-60}
           >
             Testimonials
           </NavLinks>
@@ -133,7 +128,7 @@ const PrimaryNavigation = ({ toggle, props }) => {
             duration={500}
             spy={true}
             exact="true"
-            offset={-64}
+            offset={-60}
           >
             About
           </NavLinks>
@@ -145,7 +140,7 @@ const PrimaryNavigation = ({ toggle, props }) => {
             duration={500}
             spy={true}
             exact="true"
-            offset={-64}
+            offset={-60}
           >
             Inquiries
           </NavLinks>
@@ -157,43 +152,12 @@ const PrimaryNavigation = ({ toggle, props }) => {
             duration={500}
             spy={true}
             exact="true"
-            offset={-64}
+            offset={-60}
           >
             Social
           </NavLinks>
         </NavItem>
       </NavMenu>
-
-      {/* <li>
-        <Link to="/" exact activeClassName="active">
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link to="/sample-page" activeClassName="active">
-          Portfolio
-        </Link>
-      </li>
-      <li>
-        <Link to="/sample-page" activeClassName="active">
-          Tesimonials
-        </Link>
-      </li>
-      <li>
-        <Link to="/sample-page" activeClassName="active">
-          About
-        </Link>
-      </li>
-      <li>
-        <Link to="/sample-page" activeClassName="active">
-          Inquiries
-        </Link>
-      </li>
-      <li>
-        <Link to="/sample-page" activeClassName="active">
-          Social
-        </Link>
-      </li> */}
     </Nav>
   )
 }

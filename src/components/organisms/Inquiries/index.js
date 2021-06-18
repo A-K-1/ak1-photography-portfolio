@@ -8,7 +8,7 @@ const InquiriesContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: inherit;
+  width: auto;
   align-items: center;
   background: #fff;
   padding-bottom: 70px;
