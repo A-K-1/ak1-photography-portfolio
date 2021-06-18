@@ -97,7 +97,7 @@ const PrimaryNavigation = ({ isOpen, toggle }) => {
           <NavLinks
             to="portfolio"
             smooth={true}
-            duration={2000}
+            duration={600}
             spy={true}
             exact="true"
             offset={-60}
@@ -109,7 +109,7 @@ const PrimaryNavigation = ({ isOpen, toggle }) => {
           <NavLinks
             to="testimonials"
             smooth={true}
-            duration={500}
+            duration={600}
             spy={true}
             exact="true"
             offset={-60}
@@ -121,7 +121,7 @@ const PrimaryNavigation = ({ isOpen, toggle }) => {
           <NavLinks
             to="aboutMe"
             smooth={true}
-            duration={500}
+            duration={600}
             spy={true}
             exact="true"
             offset={-60}
@@ -133,7 +133,7 @@ const PrimaryNavigation = ({ isOpen, toggle }) => {
           <NavLinks
             to="inquiries"
             smooth={true}
-            duration={500}
+            duration={600}
             spy={true}
             exact="true"
             offset={-60}
@@ -145,7 +145,7 @@ const PrimaryNavigation = ({ isOpen, toggle }) => {
           <NavLinks
             to="social"
             smooth={true}
-            duration={500}
+            duration={600}
             spy={true}
             exact="true"
             offset={-60}

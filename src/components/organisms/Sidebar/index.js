@@ -58,7 +58,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             to="portfolio"
             onClick={toggle}
             smooth={true}
-            duration={500}
+            duration={600}
             spy={true}
             exact="true"
             offset={-60}
@@ -69,7 +69,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             to="testimonials"
             onClick={toggle}
             smooth={true}
-            duration={500}
+            duration={600}
             spy={true}
             exact="true"
             offset={-60}
@@ -80,7 +80,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             to="aboutMe"
             onClick={toggle}
             smooth={true}
-            duration={500}
+            duration={600}
             spy={true}
             exact="true"
             offset={-60}
@@ -91,7 +91,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             to="inquiries"
             onClick={toggle}
             smooth={true}
-            duration={500}
+            duration={600}
             spy={true}
             exact="true"
             offset={-60}
@@ -102,7 +102,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             to="social"
             onClick={toggle}
             smooth={true}
-            duration={500}
+            duration={600}
             spy={true}
             exact="true"
             offset={-60}
