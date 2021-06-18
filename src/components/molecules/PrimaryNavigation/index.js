@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll'
 import { Link as LinkRouter } from 'react-router-dom'
-import { FaBars } from 'react-icons/fa'
 import { font, palette } from 'styled-theme'
+import { MenuIcon } from 'components'
 
 const Nav = styled.nav`
   display: flex;
@@ -94,7 +94,7 @@ const PrimaryNavigation = ({ toggle }) => {
   return (
     <Nav scrollNav={scrollNav}>
       <MobileIcon onClick={toggle}>
-        <StyledFaBars />
+        <MenuIcon />
       </MobileIcon>
       <NavMenu>
         <NavItem>
