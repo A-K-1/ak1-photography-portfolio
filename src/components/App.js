@@ -9,13 +9,11 @@ import theme from './themes/default'
 injectGlobal`
   body {
     margin: 0;
+    width: 100vw;
   }
 `
 
 const App = () => {
-  console.log('YOYOYO app', process.env)
-  console.log('node', process.env.NODE_ENV)
-
   return (
     <ThemeProvider theme={theme}>
       <Switch>

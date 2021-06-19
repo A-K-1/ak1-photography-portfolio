@@ -23,18 +23,21 @@ const TestimonialsWrapper = styled.div`
   justify-content: center;
   grid-gap: 16px;
   width: 80vw;
+  min-width: 400px;
+  overflow: hidden;
 
   @media screen and (max-width: 1000px) {
   }
 
   @media screen and (max-width: 768px) {
-    width: 96vw;
+    width: 90vw;
   }
 `
 
 const StyledSlider = styled(Slider)`
   width: inherit;
   display: flex;
+  margin-bottom: 20px;
 
   .slick-list {
     padding-top: 50px;
@@ -80,7 +83,7 @@ const Testimonials = () => {
             name="Arron Kukadia"
           />
           <TestimonialCard
-            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             image={testImage}
             name="Arron Kukadia"
           />

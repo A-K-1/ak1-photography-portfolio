@@ -12,6 +12,7 @@ const AboutWrapper = styled.div`
   width: inherit;
   align-items: center;
   background: #010606;
+  margin-top: -20px;
 `
 
 const AboutBodyWrapper = styled.div`
