@@ -98,7 +98,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           >
             Inquiries
           </SidebarLink>
-          <SidebarLink
+          {/* <SidebarLink
             to="social"
             onClick={toggle}
             smooth={true}
@@ -108,7 +108,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             offset={-60}
           >
             Social
-          </SidebarLink>
+          </SidebarLink> */}
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

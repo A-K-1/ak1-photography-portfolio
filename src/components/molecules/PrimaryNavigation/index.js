@@ -141,7 +141,7 @@ const PrimaryNavigation = ({ isOpen, toggle }) => {
             Inquiries
           </NavLinks>
         </NavItem>
-        <NavItem>
+        {/* <NavItem>
           <NavLinks
             to="social"
             smooth={true}
@@ -152,7 +152,7 @@ const PrimaryNavigation = ({ isOpen, toggle }) => {
           >
             Social
           </NavLinks>
-        </NavItem>
+        </NavItem> */}
       </NavMenu>
     </Nav>
   )

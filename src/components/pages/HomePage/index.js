@@ -35,7 +35,7 @@ const HomePage = () => {
       <Testimonials />
       <AboutGrid />
       <Inquiries />
-      <SocialGrid />
+      {/* <SocialGrid /> */}
       <Footer />
     </Wrapper>
   )

@@ -40,6 +40,20 @@ width: inherit;
 
 const StyledSlider = styled(Slider)`
 padding-top: 12px;
+min-height: 530px;
+max-height: 530px;
+`
+
+const StyledDotGroup = styled(DotGroup)`
+display: flex;
+justify-content: center;
+
+& button{
+  height: 15px;
+  border-radius: 999px;
+  border: 1px solid;
+  margin: 0 5px;
+}
 `
 
 const Testimonials = () => {
@@ -107,9 +121,7 @@ const Testimonials = () => {
             name="Arron Kukadia5"
           /></Slide>
         </StyledSlider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
-        <DotGroup />
+        <StyledDotGroup />
       </StyledTestimonialSlider>
       </TestimonialsWrapper>
     </TestimonialsContainer>
