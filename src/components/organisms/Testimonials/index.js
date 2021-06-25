@@ -1,8 +1,8 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
-import { font } from 'styled-theme'
 import { TestimonialCard, Heading } from 'components'
-import Slider from 'react-slick'
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 const TestimonialsContainer = styled.div`
   display: flex;
@@ -34,80 +34,83 @@ const TestimonialsWrapper = styled.div`
   }
 `
 
-const StyledSlider = styled(Slider)`
-  width: inherit;
-  display: flex;
-  margin-bottom: 20px;
-
-  .slick-list {
-    padding-top: 50px;
-  }
+const StyledTestimonialSlider = styled(CarouselProvider)`
+width: inherit;
 `
 
-const settings = {
-  dots: true,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  responsive: [
-    {
-      breakpoint: 1224,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-}
+const StyledSlider = styled(Slider)`
+padding-top: 12px;
+`
 
 const Testimonials = () => {
   const testImage = require('../../../../public/portraitHero.jpg')
+
+  const [pageWidth, setPageWidth] = useState(window.innerWidth);
+
+  const handleResize = (e) => {
+    setPageWidth(window.innerWidth);
+   };
+
+   const calculateVisibleSlides = () => {
+     if(pageWidth < 768) return 1
+     else if(pageWidth < 1200) return 2
+     else return 3
+   };
+
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return function cleanup() {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
   return (
     <TestimonialsContainer id="testimonials">
       <Heading colour="#000">Testimonials</Heading>
       <TestimonialsWrapper>
-        <StyledSlider {...settings}>
-          <TestimonialCard
-            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            image={testImage}
-            name="Arron Kukadia"
-          />
-          <TestimonialCard
+      <StyledTestimonialSlider
+        naturalSlideWidth={100}
+        naturalSlideHeight={125}
+        totalSlides={5}
+        visibleSlides={calculateVisibleSlides()}
+      >
+        <StyledSlider>
+          <Slide index={0}>
+            <TestimonialCard
             testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             image={testImage}
-            name="Arron Kukadia"
-          />
-          <TestimonialCard
-            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            name="Arron Kukadia1"
+          /></Slide>
+          <Slide index={1}>
+            <TestimonialCard
+            testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             image={testImage}
-            name="Arron Kukadia"
-          />
-          <TestimonialCard
-            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            name="Arron Kukadia2"
+          /></Slide>
+          <Slide index={2}>
+            <TestimonialCard
+            testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             image={testImage}
-            name="Arron Kukadia"
-          />
-          <TestimonialCard
-            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            name="Arron Kukadia3"
+          /></Slide>
+          <Slide index={3}>
+            <TestimonialCard
+            testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             image={testImage}
-            name="Arron Kukadia"
-          />
-          <TestimonialCard
-            testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            name="Arron Kukadia4"
+          /></Slide>
+          <Slide index={4}>
+            <TestimonialCard
+            testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             image={testImage}
-            name="Arron Kukadia"
-          />
+            name="Arron Kukadia5"
+          /></Slide>
         </StyledSlider>
+        <ButtonBack>Back</ButtonBack>
+        <ButtonNext>Next</ButtonNext>
+        <DotGroup />
+      </StyledTestimonialSlider>
       </TestimonialsWrapper>
     </TestimonialsContainer>
   )

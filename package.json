@@ -94,6 +94,7 @@
     "bootstrap": "^4.6.0",
     "lodash": "^4.17.13",
     "prop-types": "^15.6.2",
+    "pure-react-carousel": "^1.27.6",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-hot-loader": "^4.6.3",
