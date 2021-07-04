@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { size } from 'styled-theme'
 import { animateScroll as scroll } from 'react-scroll'
 
-import { IconLink, PrimaryNavigation, Image } from 'components'
+import { Icon, PrimaryNavigation, Image } from 'components'
 
 const InnerWrapper = styled.div`
   display: flex;
@@ -35,7 +35,6 @@ const Navbar = ({ isOpen, toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop()
   }
-
   const logo = require('../../../../public/whiteLogo.png')
   return (
     <InnerWrapper>

@@ -11,7 +11,7 @@ const TestimonialsContainer = styled.div`
   justify-content: end;
   align-items: center;
   background: #fff;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
   height: fit-content;
   width: auto;
 `

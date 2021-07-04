@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll'
-import { Link as LinkRouter } from 'react-router-dom'
 import { font, palette } from 'styled-theme'
-import { MenuIcon } from 'components'
+import { MenuIcon, Image, ImageLink } from 'components'
 
 const Nav = styled.nav`
   display: flex;
   list-style: none;
   max-height: 80px;
+  align-items: center;
 
   > :not(:first-child) {
     margin-left: 1rem;
@@ -72,8 +72,14 @@ const NavLinks = styled(LinkScroll)`
   }
 `
 
+const ImageContainer = styled.div`
+  margin-top: 0;
+`
+
 const PrimaryNavigation = ({ isOpen, toggle }) => {
   const [scrollNav, setScrollNav] = useState(false)
+  const instagram = require('../../../../public/instagramWhite.png')
+  const imageLink = "https://www.instagram.com/ak1photography/"
 
   const changeNav = () => {
     if (window.scrollY >= 60) {
@@ -88,6 +94,7 @@ const PrimaryNavigation = ({ isOpen, toggle }) => {
   }, [])
 
   return (
+    <>
     <Nav scrollNav={scrollNav}>
       <MobileIcon onClick={toggle}>
         <MenuIcon isOpen={isOpen} />
@@ -141,20 +148,13 @@ const PrimaryNavigation = ({ isOpen, toggle }) => {
             Inquiries
           </NavLinks>
         </NavItem>
-        {/* <NavItem>
-          <NavLinks
-            to="social"
-            smooth={true}
-            duration={600}
-            spy={true}
-            exact="true"
-            offset={-60}
-          >
-            Social
-          </NavLinks>
-        </NavItem> */}
       </NavMenu>
+      <ImageContainer>
+        <ImageLink link={imageLink} image={instagram} height="20px" width="auto" />
+      </ImageContainer>
     </Nav>
+    
+    </>
   )
 }
 

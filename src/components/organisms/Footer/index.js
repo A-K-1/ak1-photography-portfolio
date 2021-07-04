@@ -21,7 +21,7 @@ const Footer = (props) => {
   return (
     <Wrapper {...props}>
       <Credits>
-        AK1Photography <Icon icon="react" />
+        AK1Photography
       </Credits>
     </Wrapper>
   )
