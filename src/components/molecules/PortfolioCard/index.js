@@ -13,6 +13,7 @@ const PortfolioCardWrapper = styled.div`
   height: 250px;
   width: 375px;
   transition: all 0.2s ease-in-out;
+  margin: 10px 10px;
 
   @media screen and (min-width: 1646px) {
     height: 300px;

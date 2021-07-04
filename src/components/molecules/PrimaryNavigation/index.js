@@ -74,6 +74,9 @@ const NavLinks = styled(LinkScroll)`
 
 const ImageContainer = styled.div`
   margin-top: 0;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
 const PrimaryNavigation = ({ isOpen, toggle }) => {
