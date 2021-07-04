@@ -20,7 +20,6 @@ const PortfolioWrapper = styled.div`
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  grid-gap: 16px;
   padding: 0 50px;
 
   @media screen and (max-width: 1000px) {
