@@ -24,7 +24,7 @@ const StyledForm = styled.form`
   flex-direction: column;
   align-items: start;
 `
-const InquiriesForm = ({ testimonial, image, name }) => {
+const InquiriesForm = () => {
   return (
     <InquiriesFormWrapper>
       <Formik
@@ -38,9 +38,6 @@ const InquiriesForm = ({ testimonial, image, name }) => {
           ) {
             errors.email = 'Invalid email address'
           }
-
-          console.log(values)
-
           if (!values.name) {
             errors.name = 'Required'
           }
@@ -52,7 +49,7 @@ const InquiriesForm = ({ testimonial, image, name }) => {
         }}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            alert(JSON.stringify(values, null, 2))
+            console.log(JSON.stringify(values, null, 2))
             setSubmitting(false)
           }, 400)
         }}
