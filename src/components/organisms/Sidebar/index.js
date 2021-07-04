@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll'
+import { ImageLink } from 'components'
 
 const SidebarContainer = styled.aside`
   position: fixed;
@@ -44,12 +45,18 @@ const SidebarLink = styled(LinkScroll)`
   cursor: pointer;
 
   &:hover {
-    color: #01bf71;
+    color: #ffb380;
     transition: 0.2s ease-in-out;
   }
 `
 
+const ImageContainer = styled.div`
+  margin-top: 20px;
+`
+
 const Sidebar = ({ isOpen, toggle }) => {
+  const instagram = require('../../../../public/instagramWhite.png')
+  const imageLink = 'https://www.instagram.com/ak1photography/'
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <SidebarWrapper>
@@ -98,17 +105,14 @@ const Sidebar = ({ isOpen, toggle }) => {
           >
             Inquiries
           </SidebarLink>
-          {/* <SidebarLink
-            to="social"
-            onClick={toggle}
-            smooth={true}
-            duration={1000}
-            spy={true}
-            exact="true"
-            offset={-60}
-          >
-            Social
-          </SidebarLink> */}
+          <ImageContainer>
+            <ImageLink
+              link={imageLink}
+              image={instagram}
+              height="20px"
+              width="auto"
+            />
+          </ImageContainer>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>
