@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { font } from 'styled-theme'
 
-import { PortfolioCard, Heading } from 'components'
+import { Heading, InquiriesForm } from 'components'
 
 const InquiriesContainer = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ const InquiriesContainer = styled.div`
   width: auto;
   align-items: center;
   background: #fff;
-  padding-bottom: 70px;
+  padding-bottom: 50px;
 `
 
 const InquiriesWrapper = styled.div`
@@ -22,6 +22,7 @@ const InquiriesWrapper = styled.div`
   justify-content: center;
   grid-gap: 16px;
   padding: 0 50px;
+  width: 90%;
 
   @media screen and (max-width: 1000px) {
   }
@@ -30,14 +31,15 @@ const InquiriesWrapper = styled.div`
     padding: 0 20px;
   }
 
-  height: 1000px;
 `
 
 const Inquiries = () => {
   return (
     <InquiriesContainer id="inquiries">
       <Heading colour="#000">Inquiries</Heading>
-      <InquiriesWrapper></InquiriesWrapper>
+      <InquiriesWrapper>
+        <InquiriesForm/>
+      </InquiriesWrapper>
     </InquiriesContainer>
   )
 }

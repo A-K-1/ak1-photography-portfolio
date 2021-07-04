@@ -79,7 +79,7 @@ const ImageContainer = styled.div`
 const PrimaryNavigation = ({ isOpen, toggle }) => {
   const [scrollNav, setScrollNav] = useState(false)
   const instagram = require('../../../../public/instagramWhite.png')
-  const imageLink = "https://www.instagram.com/ak1photography/"
+  const imageLink = 'https://www.instagram.com/ak1photography/'
 
   const changeNav = () => {
     if (window.scrollY >= 60) {
@@ -95,65 +95,69 @@ const PrimaryNavigation = ({ isOpen, toggle }) => {
 
   return (
     <>
-    <Nav scrollNav={scrollNav}>
-      <MobileIcon onClick={toggle}>
-        <MenuIcon isOpen={isOpen} />
-      </MobileIcon>
-      <NavMenu>
-        <NavItem>
-          <NavLinks
-            to="portfolio"
-            smooth={true}
-            duration={600}
-            spy={true}
-            exact="true"
-            offset={-60}
-          >
-            Portfolio
-          </NavLinks>
-        </NavItem>
-        <NavItem>
-          <NavLinks
-            to="testimonials"
-            smooth={true}
-            duration={600}
-            spy={true}
-            exact="true"
-            offset={-60}
-          >
-            Testimonials
-          </NavLinks>
-        </NavItem>
-        <NavItem>
-          <NavLinks
-            to="aboutMe"
-            smooth={true}
-            duration={600}
-            spy={true}
-            exact="true"
-            offset={-60}
-          >
-            About
-          </NavLinks>
-        </NavItem>
-        <NavItem>
-          <NavLinks
-            to="inquiries"
-            smooth={true}
-            duration={600}
-            spy={true}
-            exact="true"
-            offset={-60}
-          >
-            Inquiries
-          </NavLinks>
-        </NavItem>
-      </NavMenu>
-      <ImageContainer>
-        <ImageLink link={imageLink} image={instagram} height="20px" width="auto" />
-      </ImageContainer>
-    </Nav>
-    
+      <Nav scrollNav={scrollNav}>
+        <MobileIcon onClick={toggle}>
+          <MenuIcon isOpen={isOpen} />
+        </MobileIcon>
+        <NavMenu>
+          <NavItem>
+            <NavLinks
+              to="portfolio"
+              smooth={true}
+              duration={600}
+              spy={true}
+              exact="true"
+              offset={-60}
+            >
+              Portfolio
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks
+              to="testimonials"
+              smooth={true}
+              duration={600}
+              spy={true}
+              exact="true"
+              offset={-60}
+            >
+              Testimonials
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks
+              to="aboutMe"
+              smooth={true}
+              duration={600}
+              spy={true}
+              exact="true"
+              offset={-60}
+            >
+              About
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks
+              to="inquiries"
+              smooth={true}
+              duration={600}
+              spy={true}
+              exact="true"
+              offset={-60}
+            >
+              Inquiries
+            </NavLinks>
+          </NavItem>
+        </NavMenu>
+        <ImageContainer>
+          <ImageLink
+            link={imageLink}
+            image={instagram}
+            height="20px"
+            width="auto"
+          />
+        </ImageContainer>
+      </Nav>
     </>
   )
 }
