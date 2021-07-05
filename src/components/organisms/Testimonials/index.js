@@ -57,6 +57,7 @@ const StyledDotGroup = styled(DotGroup)`
 
   & button {
     height: 15px;
+    width: 15px;
     border-radius: 999px;
     border: 1px solid;
     margin: 0 5px;
