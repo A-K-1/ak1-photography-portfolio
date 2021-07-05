@@ -18,10 +18,10 @@ const Nav = styled.nav`
 
   a {
     font-weight: 300;
-    color: #fff;
+    color: ${(props) => props.theme.palette.white};
     font-size: 1.25rem;
     &.active {
-      color: #ffb380;
+      color: ${(props) => props.theme.palette.primary};
     }
   }
 `
@@ -57,7 +57,7 @@ const NavItem = styled.li`
 `
 
 const NavLinks = styled(LinkScroll)`
-  color: #fff;
+  color: ${(props) => props.theme.palette.white};
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -67,8 +67,8 @@ const NavLinks = styled(LinkScroll)`
   font-family: ${font('primary')};
 
   &.active {
-    color: #fff;
-    border-bottom: 3px solid #ffb380;
+    color: ${(props) => props.theme.palette.white};
+    border-bottom: 3px solid ${(props) => props.theme.palette.primary};
   }
 `
 

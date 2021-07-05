@@ -17,7 +17,7 @@ const TestimonialsContainer = styled.div`
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  background: #fff;
+  background: ${(props) => props.theme.palette.white};
   padding-bottom: 40px;
   height: fit-content;
   width: auto;

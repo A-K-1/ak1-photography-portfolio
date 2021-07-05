@@ -5,7 +5,7 @@ import { palette } from 'styled-theme'
 import { SplitImage, Image } from 'components'
 
 const Wrapper = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.palette.white};
   height: 68vw;
   width: 100%;
   box-sizing: border-box;

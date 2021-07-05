@@ -10,7 +10,7 @@ const InquiriesContainer = styled.div`
   justify-content: center;
   width: auto;
   align-items: center;
-  background: #fff;
+  background: ${(props) => props.theme.palette.white};
   padding-bottom: 50px;
 `
 
@@ -30,7 +30,6 @@ const InquiriesWrapper = styled.div`
   @media screen and (max-width: 768px) {
     padding: 0 20px;
   }
-
 `
 
 const Inquiries = () => {
@@ -38,7 +37,7 @@ const Inquiries = () => {
     <InquiriesContainer id="inquiries">
       <Heading colour="#000">Inquiries</Heading>
       <InquiriesWrapper>
-        <InquiriesForm/>
+        <InquiriesForm />
       </InquiriesWrapper>
     </InquiriesContainer>
   )

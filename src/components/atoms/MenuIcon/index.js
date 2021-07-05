@@ -21,7 +21,7 @@ const baseStyles = css`
   position: absolute;
   height: 5px;
   width: 50%;
-  background: #fff;
+  background: ${(props) => props.theme.palette.white};
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);

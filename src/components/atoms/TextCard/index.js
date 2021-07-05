@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import { font, palette } from 'styled-theme'
 
 const TextCardWrapper = styled.div`
-  background: ${(props) => (props.boxColour ? props.boxColour : '#fff')};
+  background: ${(props) =>
+    props.boxColour ? props.boxColour : (props) => props.theme.palette.white};
   display: flex;
   position: relative;
   flex-direction: column;

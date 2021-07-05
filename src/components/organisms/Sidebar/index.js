@@ -21,7 +21,7 @@ const SidebarContainer = styled.aside`
 `
 
 const SidebarWrapper = styled.div`
-  color: #fff;
+  color: ${(props) => props.theme.palette.white};
 `
 
 const SidebarMenu = styled.ul`
@@ -41,11 +41,11 @@ const SidebarLink = styled(LinkScroll)`
   list-style: none;
   transition: 0.2s ease-in-out;
   text-decoration: none;
-  color: #fff;
+  color: ${(props) => props.theme.palette.white};
   cursor: pointer;
 
   &:hover {
-    color: #ffb380;
+    color: ${(props) => props.theme.palette.primary};
     transition: 0.2s ease-in-out;
   }
 `

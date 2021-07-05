@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { font, palette } from 'styled-theme'
 
 const TestimonialCardWrapper = styled.div`
-  background: #fff;
+  background: ${(props) => props.theme.palette.white};
   color: #000;
   font-size: 36px;
   line-height: 100px;

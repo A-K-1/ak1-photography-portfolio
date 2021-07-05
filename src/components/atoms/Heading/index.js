@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { font, palette } from 'styled-theme'
 
-const textColour = ({ colour }) => (colour ? colour : '#fff')
+const textColour = ({ colour }) =>
+  colour ? colour : (props) => props.theme.palette.white
 
 const styles = css`
   font-size: 2.5rem;

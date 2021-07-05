@@ -38,7 +38,10 @@ const AboutGrid = ({ header, image }) => {
       <Heading>About Me</Heading>
       <AboutBodyWrapper>
         <MobilePadding>
-          <TextCard boxColour="transparent" textColour="#fff">
+          <TextCard
+            boxColour="transparent"
+            textColour={(props) => props.theme.palette.white}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

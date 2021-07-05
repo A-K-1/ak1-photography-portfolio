@@ -4,9 +4,39 @@ import styled from 'styled-components'
 import { font, palette } from 'styled-theme'
 import { Formik } from 'formik'
 import { Button, TextField } from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles'
+
+const StyledTextField = withStyles({
+  root: {
+    marginBottom: '20px',
+    '& label.Mui-focused': {
+      color: '#ffb380',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: '#ffb380',
+    },
+    '& .MuiOutlinedInput-root': {
+      '&:hover fieldset': {
+        borderColor: '#ffb380',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#ffb380',
+      },
+    },
+  },
+})(TextField)
+
+const StyledSubmitButton = withStyles(() => ({
+  root: {
+    '&:hover': {
+      color: '#ffb380',
+      backgroundColor: '#fff',
+    },
+  },
+}))(Button)
 
 const InquiriesFormWrapper = styled.div`
-  background: #fff;
+  background: ${(props) => props.theme.palette.white};
   color: #000;
   font-size: 36px;
   line-height: 100px;
@@ -22,9 +52,11 @@ const InquiriesFormWrapper = styled.div`
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
 `
+
 const InquiriesForm = () => {
+  console.log('PALETTE')
   return (
     <InquiriesFormWrapper>
       <Formik
@@ -62,10 +94,9 @@ const InquiriesForm = () => {
           handleBlur,
           handleSubmit,
           isSubmitting,
-          /* and other goodies */
         }) => (
           <StyledForm onSubmit={handleSubmit}>
-            <TextField
+            <StyledTextField
               type="text"
               name="name"
               label="Your Name"
@@ -73,8 +104,11 @@ const InquiriesForm = () => {
               onBlur={handleBlur}
               value={values.name}
               error={errors.name && touched.name && errors.name ? true : false}
+              variant="outlined"
+              required
+              fullWidth
             />
-            <TextField
+            <StyledTextField
               type="email"
               name="email"
               label="Your Email Address"
@@ -84,9 +118,12 @@ const InquiriesForm = () => {
               error={
                 errors.email && touched.email && errors.email ? true : false
               }
+              variant="outlined"
+              required
+              fullWidth
             />
 
-            <TextField
+            <StyledTextField
               type="text"
               name="inquiryReason"
               label="Your Inquiry"
@@ -102,11 +139,14 @@ const InquiriesForm = () => {
                   ? true
                   : false
               }
+              variant="outlined"
+              required
+              fullWidth
             />
 
-            <Button type="submit" disabled={isSubmitting}>
+            <StyledSubmitButton type="submit" disabled={isSubmitting}>
               Submit
-            </Button>
+            </StyledSubmitButton>
           </StyledForm>
         )}
       </Formik>

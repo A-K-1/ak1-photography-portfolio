@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { font, palette } from 'styled-theme'
 
 const Wrapper = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.palette.white};
   display: flex;
   height: inherit;
   flex-direction: ${(props) => (props.horizontal ? 'column' : 'row')};
