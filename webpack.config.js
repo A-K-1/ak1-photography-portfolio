@@ -8,7 +8,6 @@ const HappyPack = require('happypack')
 const mergeWith = require('lodash/mergeWith')
 const isArray = require('lodash/isArray')
 
-
 const host = process.env.HOST || 'localhost'
 const port = process.env.PORT || 3000
 const sourceDir = process.env.SOURCE || 'src'
@@ -28,7 +27,14 @@ const wpConfig = {
     module: {
       rules: [
         { test: /\.jsx?$/, exclude: /node_modules/, use: 'happypack/loader' },
-        { test: /\.(png|jpe?g|svg|woff2?|ttf|eot)$/, loader: 'url-loader?limit=8000' },
+        {
+          test: /\.(png|jpe?g|svg|woff2?|ttf|eot)$/,
+          loader: 'url-loader?limit=8000',
+        },
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+        },
       ],
     },
     plugins: [
@@ -85,16 +91,12 @@ const wpConfig = {
   },
   production: {
     mode: 'production',
-    plugins: [
-      new WebpackMd5Hash(),
-    ],
+    plugins: [new WebpackMd5Hash()],
     output: {
       filename: '[name].[chunkhash].js',
     },
     optimization: {
-      minimizer: [
-        new UglifyJsPlugin(),
-      ],
+      minimizer: [new UglifyJsPlugin()],
       splitChunks: {
         name: 'vendor',
         minChunks: 2,
@@ -104,7 +106,7 @@ const wpConfig = {
 }
 
 const config = mergeWith(
-  {},
+  { node: { fs: 'empty' } },
   wpConfig.base,
   wpConfig[process.env.NODE_ENV],
   customizer,

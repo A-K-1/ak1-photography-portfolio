@@ -5,3 +5,6 @@ dist
 node_modules
 coverage
 webpack/webpack-assets.json
+.history/
+.env
+.env.development
