@@ -4,6 +4,7 @@ theme.palette = {
   primary: '#ffb380',
   secondary: ['#c2185b', '#e91e63', '#f06292', '#f8bbd0'],
   white: '#fff',
+  black: '#000',
 }
 
 theme.fonts = {
