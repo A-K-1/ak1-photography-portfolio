@@ -13,15 +13,15 @@ const TestimonialCardWrapper = styled.div`
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
   margin: 10px;
-  padding: 25px;
+  padding: 0 25px 25px;
 `
 
 const TestimonialIcon = styled.img`
-  height: 100px;
-  width: 100px;
+  height: 124px;
+  width: 124px;
   object-fit: cover;
   border-radius: 50%;
-  margin: -76px auto 0;
+  margin: -60px auto 0;
 `
 
 const TestimonialText = styled.p`
@@ -29,6 +29,7 @@ const TestimonialText = styled.p`
   font-style: italic;
   font-size: 1.25rem;
   line-height: normal;
+  margin-top: 0;
 `
 
 const TestimonialName = styled.p`
