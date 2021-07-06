@@ -56,7 +56,6 @@ const StyledForm = styled.form`
 `
 
 const InquiriesForm = () => {
-  console.log('PALETTE')
   return (
     <InquiriesFormWrapper>
       <Formik
@@ -144,7 +143,11 @@ const InquiriesForm = () => {
               fullWidth
             />
 
-            <StyledSubmitButton type="submit" disabled={isSubmitting}>
+            <StyledSubmitButton
+              size="large"
+              type="submit"
+              disabled={isSubmitting}
+            >
               Submit
             </StyledSubmitButton>
           </StyledForm>

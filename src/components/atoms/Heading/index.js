@@ -16,7 +16,7 @@ const styles = css`
     font-size: 2rem;
   }
   @media screen and (max-width: 768px) {
-    margin: 25px 0 20px;
+    margin: 40px 0 40px;
   }
 `
 

@@ -68,7 +68,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             duration={1000}
             spy={true}
             exact="true"
-            offset={-60}
+            offset={-70}
           >
             Portfolio
           </SidebarLink>
@@ -79,7 +79,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             duration={1000}
             spy={true}
             exact="true"
-            offset={-60}
+            offset={-70}
           >
             Testimonials
           </SidebarLink>
@@ -90,7 +90,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             duration={1000}
             spy={true}
             exact="true"
-            offset={-60}
+            offset={-70}
           >
             About Me
           </SidebarLink>
@@ -101,7 +101,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             duration={1000}
             spy={true}
             exact="true"
-            offset={-60}
+            offset={-70}
           >
             Inquiries
           </SidebarLink>

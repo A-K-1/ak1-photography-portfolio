@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { TestimonialCard, Heading } from 'components'
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-  DotGroup,
-} from 'pure-react-carousel'
+import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
 const TestimonialsContainer = styled.div`
@@ -49,6 +42,8 @@ const StyledSlider = styled(Slider)`
   padding-top: 12px;
   min-height: 530px;
   max-height: 530px;
+  overflow: unset !important;
+  margin-top: 40px;
 `
 
 const StyledDotGroup = styled(DotGroup)`
@@ -56,10 +51,10 @@ const StyledDotGroup = styled(DotGroup)`
   justify-content: center;
 
   & button {
-    height: 15px;
-    width: 15px;
-    border-radius: 999px;
-    border: 1px solid;
+    height: 15px !important;
+    width: 15px !important;
+    border-radius: 999px !important;
+    border: 1px solid !important;
     margin: 0 5px;
   }
 `
