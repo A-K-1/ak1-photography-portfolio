@@ -26,6 +26,7 @@ const TestimonialsWrapper = styled.div`
   width: 80vw;
   min-width: 400px;
   overflow: hidden;
+  max-height: 598px;
 
   @media screen and (max-width: 1000px) {
   }
@@ -50,6 +51,8 @@ const StyledSlider = styled(Slider)`
 const StyledDotGroup = styled(DotGroup)`
   display: flex;
   justify-content: center;
+  width: inherit;
+  position: absolute;
 
   & button {
     height: 15px !important;
@@ -109,41 +112,6 @@ const Testimonials = () => {
                 </Slide>
               )
             })}
-            {/* <Slide index={0}>
-              <TestimonialCard
-                testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                image={testImage}
-                name="Arron Kukadia1"
-              />
-            </Slide>
-            <Slide index={1}>
-              <TestimonialCard
-                testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                image={testImage}
-                name="Arron Kukadia2"
-              />
-            </Slide>
-            <Slide index={2}>
-              <TestimonialCard
-                testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                image={testImage}
-                name="Arron Kukadia3"
-              />
-            </Slide>
-            <Slide index={3}>
-              <TestimonialCard
-                testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                image={testImage}
-                name="Arron Kukadia4"
-              />
-            </Slide>
-            <Slide index={4}>
-              <TestimonialCard
-                testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                image={testImage}
-                name="Arron Kukadia5"
-              />
-            </Slide> */}
           </StyledSlider>
           <StyledDotGroup />
         </StyledTestimonialSlider>

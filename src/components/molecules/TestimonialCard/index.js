@@ -14,7 +14,8 @@ const TestimonialCardWrapper = styled.div`
   border-radius: 5px;
   margin: 10px;
   padding: 0 25px 25px;
-  max-height: 450px;
+  max-height: 460px;
+  min-height: 320px;
 `
 
 const TestimonialIcon = styled.img`
@@ -31,20 +32,28 @@ const TestimonialText = styled.p`
   font-size: 1.25rem;
   line-height: normal;
   margin-top: 0;
-  max-height: 300px;
+  margin-bottom: 40px;
+  max-height: 310px;
   overflow: scroll;
+  white-space: pre-line;
+
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 
-  -webkit-scrollbar {
-    display: none; /* Safari and Chrome */
+  :: -webkit-scrollbar {
+    width: 0;
   }
 `
 
 const TestimonialName = styled.p`
   color: #000;
   font-size: 1.5rem;
-  line-height: 30px;
+  line-height: 10px;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  text-align: center;
 `
 
 const TestimonialCard = ({ testimonial, image, name }) => {

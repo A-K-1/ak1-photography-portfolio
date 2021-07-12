@@ -22,11 +22,6 @@ data.testimonials = [
     image: require('../../../public/testimonials/kate.jpg'),
   },
   {
-    name: 'Saori',
-    body: `Arron is a kind friendly guy who you would want to work together again and again, it's simply because his skill is amazing and very professional. He knows what to do, and having many ideas so never have the "wasted" time, always efficient and even after the shooting he always gives me datas on the day or next day... Very respectful. Always great to work with him!!`,
-    image: require('../../../public/testimonials/saori.jpg'),
-  },
-  {
     name: 'Norman',
     body: `Three words to sum up working with this photographer:
 
@@ -40,6 +35,11 @@ data.testimonials = [
 
     I would highly recommend him to anyone out there!`,
     image: require('../../../public/testimonials/norman.jpg'),
+  },
+  {
+    name: 'Saori',
+    body: `Arron is a kind friendly guy who you would want to work together again and again, it's simply because his skill is amazing and very professional. He knows what to do, and having many ideas so never have the "wasted" time, always efficient and even after the shooting he always gives me datas on the day or next day... Very respectful. Always great to work with him!!`,
+    image: require('../../../public/testimonials/saori.jpg'),
   },
   {
     name: 'Sammie',
