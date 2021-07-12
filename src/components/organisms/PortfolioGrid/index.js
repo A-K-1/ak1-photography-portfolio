@@ -37,27 +37,27 @@ const Portfolio = () => {
       <PortfolioWrapper>
         <PortfolioCard
           header={'Landscapes'}
-          image={require('../../../../public/landscapePortfolio.jpg')}
+          image={require('../../../../public/portfolio/landscapePortfolio.jpg')}
         />
         <PortfolioCard
           header={'Portraits'}
-          image={require('../../../../public/portraitPortfolio.jpg')}
+          image={require('../../../../public/portfolio/portraitPortfolio.jpg')}
         />
         <PortfolioCard
           header={'Cityscapes'}
-          image={require('../../../../public/cityscapePortfolio.jpg')}
+          image={require('../../../../public/portfolio/cityscapePortfolio.jpg')}
         />
         <PortfolioCard
           header={'Events'}
-          image={require('../../../../public/eventsPortfolio.jpg')}
+          image={require('../../../../public/portfolio/eventsPortfolio.jpg')}
         />
         <PortfolioCard
           header={'Animals'}
-          image={require('../../../../public/animalsPortfolio.jpg')}
+          image={require('../../../../public/portfolio/animalsPortfolio.jpg')}
         />
         <PortfolioCard
           header={'Edits'}
-          image={require('../../../../public/editsPortfolio.jpg')}
+          image={require('../../../../public/portfolio/editsPortfolio.jpg')}
         />
       </PortfolioWrapper>
     </PortfolioContainer>

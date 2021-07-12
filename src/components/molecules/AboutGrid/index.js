@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { font, palette } from 'styled-theme'
 
 import { Heading, TextCard, Image } from 'components'
+import data from '../../data/default'
 
 const AboutWrapper = styled.div`
   display: flex;
@@ -30,9 +31,7 @@ const MobilePadding = styled.div`
   }
 `
 
-const AboutGrid = ({ header, image }) => {
-  const mobileImage = require('../../../../public/portraitHero2.jpg')
-
+const AboutGrid = () => {
   return (
     <AboutWrapper id="aboutMe">
       <Heading>About Me</Heading>
@@ -42,16 +41,10 @@ const AboutGrid = ({ header, image }) => {
             boxColour="transparent"
             textColour={(props) => props.theme.palette.white}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.{' '}
+            {data.aboutMe.body}
           </TextCard>
         </MobilePadding>
-        <Image image={mobileImage} width="30%" radius="5px" />
+        <Image image={data.aboutMe.image} width="30%" radius="5px" />
       </AboutBodyWrapper>
     </AboutWrapper>
   )
