@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { TestimonialCard, Heading } from 'components'
 import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
+import data from '../../data/default'
 
 const TestimonialsContainer = styled.div`
   display: flex;
@@ -60,7 +61,7 @@ const StyledDotGroup = styled(DotGroup)`
 `
 
 const Testimonials = () => {
-  const testImage = require('../../../../public/portraitHero.jpg')
+  const testImage = require('../../../../public/testimonials/kate.jpg')
 
   const [pageWidth, setPageWidth] = useState(window.innerWidth)
 
@@ -88,11 +89,27 @@ const Testimonials = () => {
         <StyledTestimonialSlider
           naturalSlideWidth={100}
           naturalSlideHeight={125}
-          totalSlides={5}
+          totalSlides={data.testimonials.length}
           visibleSlides={calculateVisibleSlides()}
         >
           <StyledSlider>
-            <Slide index={0}>
+            {data.testimonials.map((testimonial, index) => {
+              console.log('index', index)
+              console.log('index', testimonial.body)
+              console.log('index', testimonial.name)
+              console.log('index', testimonial.image)
+              return (
+                <Slide index={index} key={'slide' + index}>
+                  <TestimonialCard
+                    testimonial={testimonial.body}
+                    image={testimonial.image}
+                    name={testimonial.name}
+                    key={'card' + index}
+                  />
+                </Slide>
+              )
+            })}
+            {/* <Slide index={0}>
               <TestimonialCard
                 testimonial="t ut labore ostrud  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                 image={testImage}
@@ -126,7 +143,7 @@ const Testimonials = () => {
                 image={testImage}
                 name="Arron Kukadia5"
               />
-            </Slide>
+            </Slide> */}
           </StyledSlider>
           <StyledDotGroup />
         </StyledTestimonialSlider>

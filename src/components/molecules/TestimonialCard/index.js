@@ -14,6 +14,7 @@ const TestimonialCardWrapper = styled.div`
   border-radius: 5px;
   margin: 10px;
   padding: 0 25px 25px;
+  max-height: 450px;
 `
 
 const TestimonialIcon = styled.img`
@@ -30,6 +31,14 @@ const TestimonialText = styled.p`
   font-size: 1.25rem;
   line-height: normal;
   margin-top: 0;
+  max-height: 300px;
+  overflow: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+
+  -webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 `
 
 const TestimonialName = styled.p`

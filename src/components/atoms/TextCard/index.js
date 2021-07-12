@@ -19,6 +19,7 @@ const TextCardWrapper = styled.div`
 `
 
 const CardText = styled.p`
+  white-space: pre-line;
   font-size: 1.5rem;
   font-family: ${font('primary')};
   color: ${(props) => (props.textColour ? props.textColour : '#000')};
