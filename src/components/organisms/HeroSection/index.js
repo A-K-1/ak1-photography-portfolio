@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import data from '../../data/default'
 
-import { SplitImage, Image } from 'components'
+import { SplitImage, Image, ScrollArrow } from 'components'
 
 const Wrapper = styled.div`
   background-color: ${(props) => props.theme.palette.white};
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   margin-top: 70px;
 
   @media screen and (max-width: 768px) {
-    height: fit-content;
+    height: 100vh;
     margin-top: unset;
   }
 `
@@ -28,7 +28,14 @@ const SplitImageDesktop = styled.div`
 const SplitImageMobile = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
+    height: 100vh;
     display: block;
+    background-repeat: no-repeat;
+    background: url(${({ image }) => image});
+    background-size: cover;
+    object-fit: none;
+    object-position: 50% 50%;
+    background-position: center;
   }
 `
 
@@ -41,9 +48,11 @@ const HeroSection = (props) => {
           rightImage={data.hero.rightImage}
         />
       </SplitImageDesktop>
-      <SplitImageMobile>
-        <Image image={data.hero.mobileImage} height="60%" />
+      <SplitImageMobile image={data.hero.mobileImageNarrow}>
+        {/* <Image image={data.hero.mobileImage} height="60%" /> */}
       </SplitImageMobile>
+
+      <ScrollArrow scrollTo="portfolio" />
     </Wrapper>
   )
 }

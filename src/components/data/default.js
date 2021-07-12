@@ -13,6 +13,7 @@ data.hero = {
   leftImage: require('../../../public/portraitHero.jpg'),
   rightImage: require('../../../public/portraitHero2.jpg'),
   mobileImage: require('../../../public/portraitHeroMobile.jpg'),
+  mobileImageNarrow: require('../../../public/portraitHeroMobileNarrow.jpg'),
 }
 
 data.aboutMe = {
