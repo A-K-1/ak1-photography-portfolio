@@ -46,10 +46,10 @@ const TestimonialText = styled.p`
 
 const TestimonialName = styled.p`
   color: #000;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   line-height: 10px;
   position: absolute;
-  bottom: 5px;
+  bottom: 7px;
   left: 0;
   right: 0;
   text-align: center;

@@ -14,6 +14,7 @@ const TestimonialsContainer = styled.div`
   background: ${(props) => props.theme.palette.white};
   height: fit-content;
   width: auto;
+  padding-bottom: 50px;
 `
 
 const TestimonialsWrapper = styled.div`
