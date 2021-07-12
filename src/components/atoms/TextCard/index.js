@@ -15,7 +15,7 @@ const TextCardWrapper = styled.div`
   padding: 10px;
   min-width: 300px;
   max-width: 700px;
-  min-height: 600px;
+  min-height: 400px;
 `
 
 const CardText = styled.p`
