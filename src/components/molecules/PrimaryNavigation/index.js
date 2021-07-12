@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll'
-import { font, palette } from 'styled-theme'
-import { MenuIcon, Image, ImageLink } from 'components'
+import { font } from 'styled-theme'
+import { MenuIcon, ImageLink } from 'components'
+import data from '../../data/default'
 
 const Nav = styled.nav`
   display: flex;
@@ -81,8 +82,6 @@ const ImageContainer = styled.div`
 
 const PrimaryNavigation = ({ isOpen, toggle }) => {
   const [scrollNav, setScrollNav] = useState(false)
-  const instagram = require('../../../../public/instagramWhite.png')
-  const imageLink = 'https://www.instagram.com/ak1photography/'
 
   const changeNav = () => {
     if (window.scrollY >= 60) {
@@ -154,8 +153,8 @@ const PrimaryNavigation = ({ isOpen, toggle }) => {
         </NavMenu>
         <ImageContainer>
           <ImageLink
-            link={imageLink}
-            image={instagram}
+            link={data.links.instagramLink}
+            image={data.links.instagramLogo}
             height="20px"
             width="auto"
           />

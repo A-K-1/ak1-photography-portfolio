@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { font, palette } from 'styled-theme'
@@ -32,6 +32,19 @@ const MobilePadding = styled.div`
 `
 
 const AboutGrid = () => {
+  const [pageWidth, setPageWidth] = useState(window.innerWidth)
+
+  const handleResize = (e) => {
+    setPageWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+    return function cleanup() {
+      window.removeEventListener('resize', handleResize)
+    }
+  })
+
   return (
     <AboutWrapper id="aboutMe">
       <Heading>About Me</Heading>
@@ -44,7 +57,11 @@ const AboutGrid = () => {
             {data.aboutMe.body}
           </TextCard>
         </MobilePadding>
-        <Image image={data.aboutMe.image} width="30%" radius="5px" />
+        <Image
+          image={data.aboutMe.image}
+          width={pageWidth > 768 ? '30%' : '50%'}
+          radius="5px"
+        />
       </AboutBodyWrapper>
     </AboutWrapper>
   )

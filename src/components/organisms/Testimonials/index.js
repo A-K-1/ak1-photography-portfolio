@@ -12,7 +12,6 @@ const TestimonialsContainer = styled.div`
   justify-content: end;
   align-items: center;
   background: ${(props) => props.theme.palette.white};
-  padding-bottom: 40px;
   height: fit-content;
   width: auto;
 `
@@ -28,9 +27,6 @@ const TestimonialsWrapper = styled.div`
   overflow: hidden;
   max-height: 598px;
 
-  @media screen and (max-width: 1000px) {
-  }
-
   @media screen and (max-width: 768px) {
     width: 90vw;
   }
@@ -42,8 +38,7 @@ const StyledTestimonialSlider = styled(CarouselProvider)`
 
 const StyledSlider = styled(Slider)`
   padding-top: 12px;
-  min-height: 530px;
-  max-height: 530px;
+  height: 490px;
   overflow: unset !important;
   margin-top: 40px;
 `
@@ -60,12 +55,11 @@ const StyledDotGroup = styled(DotGroup)`
     border-radius: 999px !important;
     border: 1px solid !important;
     margin: 0 5px;
+    background: #fff;
   }
 `
 
 const Testimonials = () => {
-  const testImage = require('../../../../public/testimonials/kate.jpg')
-
   const [pageWidth, setPageWidth] = useState(window.innerWidth)
 
   const handleResize = (e) => {
@@ -94,13 +88,10 @@ const Testimonials = () => {
           naturalSlideHeight={125}
           totalSlides={data.testimonials.length}
           visibleSlides={calculateVisibleSlides()}
+          lockOnWindowScroll
         >
-          <StyledSlider>
+          <StyledSlider moveThreshold={0.2}>
             {data.testimonials.map((testimonial, index) => {
-              console.log('index', index)
-              console.log('index', testimonial.body)
-              console.log('index', testimonial.name)
-              console.log('index', testimonial.image)
               return (
                 <Slide index={index} key={'slide' + index}>
                   <TestimonialCard

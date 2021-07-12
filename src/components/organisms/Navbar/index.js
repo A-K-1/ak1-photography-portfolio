@@ -1,9 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { size } from 'styled-theme'
 import { animateScroll as scroll } from 'react-scroll'
-
-import { Icon, PrimaryNavigation, Image } from 'components'
+import { PrimaryNavigation, Image } from 'components'
+import data from '../../data/default'
 
 const InnerWrapper = styled.div`
   display: flex;
@@ -35,11 +34,10 @@ const Navbar = ({ isOpen, toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop()
   }
-  const logo = require('../../../../public/whiteLogo.png')
   return (
     <InnerWrapper>
       <LogoWrapper onClick={toggleHome}>
-        <Image image={logo} height="60px" width="auto" />
+        <Image image={data.navBar.logo} height="60px" width="auto" />
       </LogoWrapper>
       <PrimaryNavigation isOpen={isOpen} toggle={toggle} />
     </InnerWrapper>

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { font } from 'styled-theme'
+import data from '../../data/default'
 
 import { PortfolioCard, Heading } from 'components'
 
@@ -20,10 +20,7 @@ const PortfolioWrapper = styled.div`
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  padding: 0 50px;
-
-  @media screen and (max-width: 1000px) {
-  }
+  padding: 0 25px;
 
   @media screen and (max-width: 768px) {
     padding: 0;
@@ -35,30 +32,15 @@ const Portfolio = () => {
     <PortfolioContainer id="portfolio">
       <Heading>Portfolio</Heading>
       <PortfolioWrapper>
-        <PortfolioCard
-          header={'Landscapes'}
-          image={require('../../../../public/portfolio/landscapePortfolio.jpg')}
-        />
-        <PortfolioCard
-          header={'Portraits'}
-          image={require('../../../../public/portfolio/portraitPortfolio.jpg')}
-        />
-        <PortfolioCard
-          header={'Cityscapes'}
-          image={require('../../../../public/portfolio/cityscapePortfolio.jpg')}
-        />
-        <PortfolioCard
-          header={'Events'}
-          image={require('../../../../public/portfolio/eventsPortfolio.jpg')}
-        />
-        <PortfolioCard
-          header={'Animals'}
-          image={require('../../../../public/portfolio/animalsPortfolio.jpg')}
-        />
-        <PortfolioCard
-          header={'Edits'}
-          image={require('../../../../public/portfolio/editsPortfolio.jpg')}
-        />
+        {data.portfolio.map((portfolioItem, index) => {
+          return (
+            <PortfolioCard
+              header={portfolioItem.header}
+              image={portfolioItem.image}
+              key={'portfolioCard' + index}
+            />
+          )
+        })}
       </PortfolioWrapper>
     </PortfolioContainer>
   )

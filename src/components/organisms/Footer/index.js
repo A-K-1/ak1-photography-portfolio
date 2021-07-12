@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import data from '../../data/default'
 
 import { Paragraph, ImageLink } from 'components'
 
@@ -25,15 +26,13 @@ const ImageContainer = styled.div`
 `
 
 const Footer = (props) => {
-  const instagram = require('../../../../public/instagramWhite.png')
-  const imageLink = 'https://www.instagram.com/ak1photography/'
   return (
     <Wrapper {...props}>
-      <Credits>AK1Photography 2021</Credits>
+      <Credits>{data.footer.text}</Credits>
       <ImageContainer>
         <ImageLink
-          link={imageLink}
-          image={instagram}
+          link={data.links.instagramLink}
+          image={data.links.instagramLogo}
           height="20px"
           width="auto"
         />

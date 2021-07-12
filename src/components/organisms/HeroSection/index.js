@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { palette } from 'styled-theme'
+import data from '../../data/default'
 
 import { SplitImage, Image } from 'components'
 
@@ -33,16 +33,16 @@ const SplitImageMobile = styled.div`
 `
 
 const HeroSection = (props) => {
-  const leftImage = require('../../../../public/portraitHero.jpg')
-  const rightImage = require('../../../../public/portraitHero2.jpg')
-  const mobileImage = require('../../../../public/portraitHeroMobile.jpg')
   return (
     <Wrapper {...props}>
       <SplitImageDesktop>
-        <SplitImage leftImage={leftImage} rightImage={rightImage} />
+        <SplitImage
+          leftImage={data.hero.leftImage}
+          rightImage={data.hero.rightImage}
+        />
       </SplitImageDesktop>
       <SplitImageMobile>
-        <Image image={mobileImage} height="60%" />
+        <Image image={data.hero.mobileImage} height="60%" />
       </SplitImageMobile>
     </Wrapper>
   )
