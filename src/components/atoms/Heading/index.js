@@ -13,10 +13,10 @@ const styles = css`
   font-family: ${font('primary')};
 
   @media screen and (max-width: 480px) {
-    font-size: 2rem;
+    font-size: 2.125rem;
   }
   @media screen and (max-width: 768px) {
-    margin: 40px 0 40px;
+    margin: 40px 0 28px;
   }
 `
 

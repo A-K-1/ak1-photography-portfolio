@@ -34,12 +34,12 @@ const PortfolioCardIcon = styled.img`
 `
 
 const PortfolioCardHeader = styled.h2`
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-family: ${font('primary')};
   color: ${(props) => props.theme.palette.white};
   position: absolute;
   bottom: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 `
 
 const PortfolioCard = ({ header, image }) => {
