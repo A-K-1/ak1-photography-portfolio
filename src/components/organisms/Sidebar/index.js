@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { animateScroll as scroll, Link as LinkScroll } from 'react-scroll'
 import { ImageLink } from 'components'
+import data from '../../data/default'
 
 const SidebarContainer = styled.aside`
   position: fixed;
@@ -55,8 +56,6 @@ const ImageContainer = styled.div`
 `
 
 const Sidebar = ({ isOpen, toggle }) => {
-  const instagram = require('../../../../public/instagramWhite.png')
-  const imageLink = 'https://www.instagram.com/ak1photography/'
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <SidebarWrapper>
@@ -107,8 +106,8 @@ const Sidebar = ({ isOpen, toggle }) => {
           </SidebarLink>
           <ImageContainer>
             <ImageLink
-              link={imageLink}
-              image={instagram}
+              link={data.links.instagramLink}
+              image={data.links.instagramLogo}
               height="20px"
               width="auto"
             />

@@ -14,8 +14,7 @@ const TestimonialCardWrapper = styled.div`
   border-radius: 5px;
   margin: 10px;
   padding: 0 25px 25px;
-  max-height: 460px;
-  min-height: 320px;
+  height: 410px;
 `
 
 const TestimonialIcon = styled.img`
@@ -33,7 +32,7 @@ const TestimonialText = styled.p`
   line-height: normal;
   margin-top: 0;
   margin-bottom: 40px;
-  max-height: 310px;
+  height: 270px;
   overflow: scroll;
   white-space: pre-line;
 

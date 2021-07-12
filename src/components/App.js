@@ -9,13 +9,12 @@ import data from './data/default'
 injectGlobal`
   body {
     margin: 0;
-    width: 100vw;
   }
 `
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme} data={data}>
+    <ThemeProvider theme={theme}>
       <Switch>
         <Route path="/" component={HomePage} exact />
         <Route component={NotFoundPage} />
