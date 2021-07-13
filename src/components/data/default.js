@@ -64,15 +64,11 @@ data.testimonials = [
   },
   {
     name: 'Norman',
-    body: `Three words to sum up working with this photographer:
-
-    Focused, friendly, and Imaginative.
+    body: `Three words to sum up working with this photographer: Focused, friendly, and Imaginative.
 
     Prior to the shoot, he had done his due diligence. We had decided to shoot in Canary Wharf, and from the jump, he knew where was best for particular styled pictures.
 
-    He had a keen eye for attention to detail - which locations had the best lighting, or matched the effect of the mood and expressions I was trying to create. In that sense, he is a visionary.
-
-    But above all, he was a really fun person to work with. The time of the shoot flew by: he knew what he was doing, and kept the proceedings fun and engaging at all times.
+    He had a keen eye for attention to detail - which locations had the best lighting, or matched the effect of the mood and expressions I was trying to create. In that sense, he is a visionary. But above all, he was a really fun person to work with. The time of the shoot flew by: he knew what he was doing, and kept the proceedings fun and engaging at all times.
 
     I would highly recommend him to anyone out there!`,
     image: require('../../../public/testimonials/norman.jpg'),
