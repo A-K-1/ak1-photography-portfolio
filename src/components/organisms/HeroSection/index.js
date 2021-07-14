@@ -39,6 +39,11 @@ const SplitImageMobile = styled.div`
   }
 `
 
+const ScrollArrowWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
 const HeroSection = (props) => {
   return (
     <Wrapper {...props}>
@@ -52,7 +57,9 @@ const HeroSection = (props) => {
         {/* <Image image={data.hero.mobileImage} height="60%" /> */}
       </SplitImageMobile>
 
-      <ScrollArrow scrollTo="portfolio" />
+      <ScrollArrowWrapper>
+        <ScrollArrow scrollTo="portfolio" />
+      </ScrollArrowWrapper>
     </Wrapper>
   )
 }

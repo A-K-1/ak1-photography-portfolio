@@ -16,10 +16,10 @@ const GlobalStyles = createGlobalStyle`
 const App = () => {
   useEffect(() => {
     AOS.init()
-  })
+  }, [])
 
   return (
-    <ThemeProvider theme={theme} data-aos="fade-up">
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Switch>
         <Route path="/" component={HomePage} exact />
