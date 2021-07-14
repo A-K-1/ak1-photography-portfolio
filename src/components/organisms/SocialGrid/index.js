@@ -10,7 +10,7 @@ const SocialContainer = styled.div`
   justify-content: center;
   width: auto;
   align-items: center;
-  background: #010606;
+  background: ${(props) => props.theme.palette.white};
   padding-bottom: 70px;
 `
 

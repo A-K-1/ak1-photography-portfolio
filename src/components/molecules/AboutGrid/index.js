@@ -12,7 +12,7 @@ const AboutWrapper = styled.div`
   justify-content: center;
   width: inherit;
   align-items: center;
-  background: #010606;
+  background: ${(props) => props.theme.palette.black};
 `
 
 const AboutBodyWrapper = styled.div`
@@ -22,7 +22,7 @@ const AboutBodyWrapper = styled.div`
   justify-content: space-evenly;
   width: inherit;
   align-items: center;
-  background: #010606;
+  background: ${(props) => props.theme.palette.black};
 `
 
 const MobilePadding = styled.div`
