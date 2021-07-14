@@ -83,7 +83,7 @@ const Testimonials = () => {
   return (
     <TestimonialsContainer id="testimonials">
       <Heading colour="#000">Testimonials</Heading>
-      <TestimonialsWrapper>
+      <TestimonialsWrapper data-aos="fade-left">
         <StyledTestimonialSlider
           naturalSlideWidth={100}
           naturalSlideHeight={125}

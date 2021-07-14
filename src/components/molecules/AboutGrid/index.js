@@ -48,7 +48,7 @@ const AboutGrid = () => {
   return (
     <AboutWrapper id="aboutMe">
       <Heading>About Me</Heading>
-      <AboutBodyWrapper>
+      <AboutBodyWrapper data-aos="fade-right">
         <MobilePadding>
           <TextCard
             boxColour="transparent"

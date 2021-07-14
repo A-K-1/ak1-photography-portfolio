@@ -36,7 +36,7 @@ const Inquiries = () => {
   return (
     <InquiriesContainer id="inquiries">
       <Heading colour="#000">Inquiries</Heading>
-      <InquiriesWrapper>
+      <InquiriesWrapper data-aos="zoom-in">
         <InquiriesForm />
       </InquiriesWrapper>
     </InquiriesContainer>
