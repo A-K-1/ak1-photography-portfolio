@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import data from '../../data/default'
 
@@ -10,7 +10,7 @@ const PortfolioContainer = styled.div`
   justify-content: center;
   width: inherit;
   align-items: center;
-  background: #010606;
+  background: ${(props) => props.theme.palette.black};
   padding-bottom: 70px;
 `
 
