@@ -57,7 +57,7 @@ const TestimonialName = styled.p`
 
 const TestimonialCard = ({ testimonial, image, name }) => {
   return (
-    <TestimonialCardWrapper>
+    <TestimonialCardWrapper data-aos="fade-left">
       <TestimonialIcon src={image} />
       <TestimonialText>{testimonial}</TestimonialText>
       <TestimonialName>{name}</TestimonialName>

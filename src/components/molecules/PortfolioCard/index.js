@@ -44,7 +44,7 @@ const PortfolioCardHeader = styled.h2`
 
 const PortfolioCard = ({ header, image }) => {
   return (
-    <PortfolioCardWrapper>
+    <PortfolioCardWrapper data-aos="fade-up">
       <PortfolioCardIcon src={image} />
       <PortfolioCardHeader>{header}</PortfolioCardHeader>
     </PortfolioCardWrapper>

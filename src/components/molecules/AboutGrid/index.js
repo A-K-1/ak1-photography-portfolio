@@ -10,7 +10,6 @@ const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: inherit;
   align-items: center;
   background: ${(props) => props.theme.palette.black};
 `
@@ -48,7 +47,7 @@ const AboutGrid = () => {
   return (
     <AboutWrapper id="aboutMe">
       <Heading>About Me</Heading>
-      <AboutBodyWrapper>
+      <AboutBodyWrapper data-aos="fade-right">
         <MobilePadding>
           <TextCard
             boxColour="transparent"
