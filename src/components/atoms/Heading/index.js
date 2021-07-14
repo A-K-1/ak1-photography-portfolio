@@ -8,7 +8,7 @@ const textColour = ({ colour }) =>
 
 const styles = css`
   font-size: 2.5rem;
-  color: ${textColour}
+  color: ${textColour};
   margin: 64px 0;
   font-family: ${font('primary')};
 
