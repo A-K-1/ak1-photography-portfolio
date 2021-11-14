@@ -12,6 +12,7 @@ const AboutWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background: ${(props) => props.theme.palette.black};
+  padding-bottom: 20px;
 `
 
 const AboutBodyWrapper = styled.div`
@@ -58,7 +59,7 @@ const AboutGrid = () => {
         </MobilePadding>
         <Image
           image={data.aboutMe.image}
-          width={pageWidth > 768 ? '30%' : '50%'}
+          width={pageWidth > 768 ? '25%' : '50%'}
           radius="5px"
         />
       </AboutBodyWrapper>
